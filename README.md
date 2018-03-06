@@ -1,2 +1,3 @@
 # chocolatey-schemacrawler
-Chocolatey package source to install schemacrawler
+
+[Chocolatey](https://chocolatey.org)  package source to install [schemacrawler](http://www.schemacrawler.com/).
