@@ -32,7 +32,6 @@
   
   <files>
     <file src="tools\**" target="tools\" />
-    <file src="tools\my-schemacrawler.cmd" target="..\schemacrawler-14.19.01-distribution\_schemacrawler\my-schemacrawler.cmd" />
   </files>
 
 </package>
