@@ -1,0 +1,31 @@
+choco uninstall schemacrawler
+
+choco install schemacrawler -dv -s .
+choco install -fdv schemacrawler.nuspec
+
+
+
+
+choco push schemacrawler.nupkg -s https://chocolatey.org/ 
+
+-apikey 
+
+
+
+https://github.com/chocolatey/choco/wiki/CreatePackagesQuickStart
+
+
+ Test the package
+
+    Testing should probably be done on a Virtual Machine
+    In your package directory, use:
+        choco install package-name -s . (package-name is the id element in the nuspec)
+
+Push the package to the Chocolatey community package repository:
+
+    Get a Chocolatey account:
+        Register
+    Copy the API key from your Chocolatey account.
+    choco apikey -k [API_KEY_HERE] -source https://push.chocolatey.org/
+    choco push package-name.1.1.0.nupkg -s https://push.chocolatey.org/ - nupkg file can be ommitted if it is the only one in the directory.
+
