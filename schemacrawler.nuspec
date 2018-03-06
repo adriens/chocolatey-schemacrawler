@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>schemacrawler</id>
+    <title>Schemacrawler</title>
+    <version>14.20.01</version>
+    <authors>Sualeh Fatehi</authors>
+    <owners>Adrien Sales</owners>
+    <summary>Free database schema discovery and comprehension tool.</summary>
+    <description>SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler has a good
+	mix of useful features for data governance. You can search for database schema objects using regular expressions,
+	and output the schema and data in a readable text format. The output serves for database documentation, and is
+	designed to be diff-ed against other database schemas. SchemaCrawler also generates schema diagrams. You can
+	execute scripts in any standard scripting language against your database. You can find potential schema design
+	issues with lint.</description>
+    <projectUrl>http://www.schemacrawler.com/</projectUrl>
+    <tags>database-schemas jdbc metadata database-diagrams e-r-diagrams schema java</tags>
+    <licenseUrl>http://www.schemacrawler.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/sualeh/SchemaCrawler/raw/master/schemacrawler-docs/logo/schemacrawler_logo.png?raw=true</iconUrl>
+    <releaseNotes>http://www.schemacrawler.com/changes-report.html</releaseNotes>
+    <docsUrl>http://www.schemacrawler.com/how-to.html</docsUrl>
+    <bugTrackerUrl>https://github.com/schemacrawler/SchemaCrawler/issues</bugTrackerUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>https://github.com/schemacrawler/SchemaCrawler</projectSourceUrl>
+    <dependencies>
+        <dependency id="jdk8" version="[8.0,)" />
+        <dependency id="graphviz"/>
+    </dependencies>
+  </metadata>
+  
+  <files>
+    <file src="tools\**" target="tools\" />
+    <file src="tools\my-schemacrawler.cmd" target="..\schemacrawler-14.19.01-distribution\_schemacrawler\my-schemacrawler.cmd" />
+  </files>
+
+</package>
