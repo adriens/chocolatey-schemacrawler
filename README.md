@@ -24,7 +24,7 @@ choco install -fdv schemacrawler.nuspec
 Push the package to central [package repository](https://chocolatey.org/packages) :
 
 ```
-choco push schemacrawler.nupkg -s https://chocolatey.org/ -apikey *****
+choco push schemacrawler.14.20.01.nupkg -s https://chocolatey.org/ -apikey *****
 ``` 
 
 # Resources
