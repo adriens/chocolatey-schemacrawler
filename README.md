@@ -6,8 +6,27 @@
 
 Have [chocolatey](https://chocolatey.org/) [properly installed](https://chocolatey.org/install) and web access.
 
+
+# Install from choco repo
+
+To install schemacrawler, simply run, with ```Administrator``` privileges :
+
+```
+choco install jdk8 graphviz.portable schemacrawler
+```
+
+Uninstall package :
+
+```
+choco uninstall schemacrawler
+```
+
+
+
+
 # Build and install commands
 
+With ```Administrator privileges```, run a ```cmd``` shell.
 
 Uninstall package :
 
