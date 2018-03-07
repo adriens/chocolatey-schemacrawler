@@ -26,7 +26,7 @@
     <projectSourceUrl>https://github.com/schemacrawler/SchemaCrawler</projectSourceUrl>
     <dependencies>
         <dependency id="jdk8" version="[8.0,)" />
-        <dependency id="graphviz"/>
+        <dependency id="graphviz" version="[2.38,)/>
     </dependencies>
   </metadata>
   
