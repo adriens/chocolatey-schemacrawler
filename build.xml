@@ -1,0 +1,6 @@
+<?xml version = "1.0"?>
+<project name = "Schemacrawler chocolatey package build helper" default = "info">
+   <target name = "info">
+      <echo>Ant build that helps preparing schemacrawler chocolatey releases.</echo>
+   </target>
+</project>
