@@ -67,8 +67,7 @@
     
     <target name="make" 
             depends="prepare"
-            description="Build AND INSTALL schemacrawler from the
-        locally built chocolatey package.">
+            description="Build AND INSTALL schemacrawler from the locally built chocolatey package.">
             <exec executable="cmd">
                 <arg value="/c"/>
                 <arg value="choco install --yes -fdv schemacrawler.nuspec"/>
