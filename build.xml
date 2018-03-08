@@ -72,6 +72,9 @@
                 <arg value="/c"/>
                 <arg value="choco install --yes -fdv schemacrawler.nuspec"/>
             </exec>
+            
+            <echo>Release command :</echo>
+            <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey *******</echo>
     </target>
     
     <target name="choco-uninstall" 
