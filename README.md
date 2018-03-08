@@ -46,3 +46,6 @@ Push the package to central [package repository](https://chocolatey.org/packages
 ```
 choco push schemacrawler.14.20.01.nupkg -s https://chocolatey.org/ -apikey *****
 ``` 
+# For developers
+
+For developers, take a look at the ```ant``` build tasks used to automate package compile and build.
