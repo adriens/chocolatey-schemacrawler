@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+           DO NOT HARDCODE THIS FILE WITH DYNAMIC VARIABLES : THIS FILE IS A TEMPLATE
+		   THAT IS PROCESSED BY AN ant build.
+-->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>schemacrawler</id>
     <title>Schemacrawler</title>
-    <version>14.20.01</version>
+    <version>@SCHEMACRAWLER_VERSION@</version>
     <authors>Sualeh Fatehi</authors>
     <owners>Adrien Sales</owners>
     <summary>Free database schema discovery and comprehension tool.</summary>

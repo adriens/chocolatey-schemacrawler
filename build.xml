@@ -1,6 +1,95 @@
 <?xml version = "1.0"?>
-<project name = "Schemacrawler chocolatey package build helper" default = "info">
-   <target name = "info">
-      <echo>Ant build that helps preparing schemacrawler chocolatey releases.</echo>
-   </target>
+<project name = "Schemacrawler chocolatey package build helper" 
+         default = "info">
+    <target name = "info" description="Show some infos abot this build file." depends="load.properties">
+        <echo>Ant build that helps preparing schemacrawler chocolatey releases.</echo>
+    </target>
+   
+    <target name="load.properties" description = "Load external parametrized properties.">
+        <loadproperties>
+            <file file="schemacrawler.properties"/>
+        </loadproperties>
+        <echo>Schemacrawler target version : &lt;${schemacrawler.version}&gt;</echo>
+    </target>
+   
+    <target name = "clean" description="Clean all build result files.">
+        <echo>Cleaning generated NUGETS generated package (nupkg) and other dynamic build files like *.ps1.</echo>
+        <delete>
+            <fileset dir="." includes="*.nupkg"/>
+            <fileset dir="./work/" includes="*.SHA-512"/>
+            <fileset dir="." includes="*.nuspec"/>
+            <fileset dir="." includes="**/*.ps1"/>
+        </delete>
+    </target>
+   
+    <target name="get.sha512" depends="load.properties" description="Get the SHA512 checksum from Schemacrawler Github official release.">
+        <get src="https://github.com/schemacrawler/SchemaCrawler/releases/download/v${schemacrawler.version}/schemacrawler-${schemacrawler.version}-distribution.zip.SHA-512"
+             dest="work/schemacrawler-${schemacrawler.version}-distribution.zip.SHA-512"/>
+    </target>
+   
+    <target name="load.sha512.as.property" depends="get.sha512" description="Loads the sha512 checksum as a property.">
+        <loadfile property="sha512" srcFile="work/schemacrawler-${schemacrawler.version}-distribution.zip.SHA-512">
+            <filterchain>
+                <striplinebreaks/>
+            </filterchain>
+        </loadfile>
+        <echo>Got sha512 checksum : &lt;${sha512}&gt;</echo>
+    </target>
+    
+    <target name="prepare.build.files"
+            description="Inject dynamic variables in chocolatey build files."
+            depends="load.sha512.as.property">
+        <echo>Preparing &lt;schemacrawler.nuspec&gt; file : injecting schemacrawler version...</echo>
+        <copy file="templates/schemacrawler.nuspec.TEMPLATE" tofile="schemacrawler.nuspec"/>
+        <echo>Injecting target schemacrawler version in nuspec file...</echo>
+        <replace file="schemacrawler.nuspec" token="@SCHEMACRAWLER_VERSION@" value="${schemacrawler.version}"/>
+        <echo>nuspec file prepared.</echo>
+        
+        <echo>Preparing &lt;chocolateyInstall.ps1&gt; ...</echo>
+        <copy file="templates/chocolateyInstall.ps1.TEMPLATE" tofile="tools/chocolateyInstall.ps1"/>
+        <replace file="tools/chocolateyInstall.ps1" token="@SCHEMACRAWLER_VERSION@" value="${schemacrawler.version}"/>
+        <replace file="tools/chocolateyInstall.ps1" token="@SHA512@" value="${sha512}"/>
+        <echo>&lt;chocolateyInstall.ps1&gt; file prepared.</echo>
+        
+        <echo>Preparing &lt;chocolateyUninstall.ps1&gt; ...</echo>
+        <copy file="templates/chocolateyUninstall.ps1.TEMPLATE" tofile="tools/chocolateyUninstall.ps1"/>
+        <replace file="tools/chocolateyUninstall.ps1" token="@SCHEMACRAWLER_VERSION@" value="${schemacrawler.version}"/>
+        <echo>&lt;chocolateyUninstall.ps1&gt; file prepared.</echo>
+        
+    </target>
+    
+    <target name="prepare"
+            description="Prepare all the files required to run a &lt;choco install -fdv schemacrawler.nuspec&gt;"
+            depends="clean,prepare.build.files">
+        <echo>ready to run choco build :</echo>
+        <echo>choco install -fdv schemacrawler.nuspec</echo>
+    </target>
+    
+    <target name="make" 
+            depends="prepare"
+            description="Build AND INSTALL schemacrawler from the
+        locally built chocolatey package.">
+            <exec executable="cmd">
+                <arg value="/c"/>
+                <arg value="choco install --yes -fdv schemacrawler.nuspec"/>
+            </exec>
+    </target>
+    
+    <target name="choco-uninstall" 
+            depends="clean"
+            description="Uninstall schemacrawler.">
+            <exec executable="cmd">
+                <arg value="/c"/>
+                <arg value="choco uninstall --yes schemacrawler"/>
+            </exec>
+    </target>
+    
+    <target name="choco-install" 
+            depends="clean"
+            description="Install schemacrawler from central chocolatey repo.">
+            <exec executable="cmd">
+                <arg value="/c"/>
+                <arg value="choco install schemacrawler"/>
+            </exec>
+    </target>
 </project>
