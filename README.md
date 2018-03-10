@@ -41,11 +41,7 @@ Manually build and install the package from the source :
 choco install -fdv schemacrawler.nuspec
 ```
 
-Push the package to central [package repository](https://chocolatey.org/packages) :
-
-```
-choco push schemacrawler.14.20.01.nupkg -s https://chocolatey.org/ -apikey *****
-``` 
+Push the package to central [package repository](https://chocolatey.org/packages) : check prepared `ant` tasks.
 # For developers
 
 For developers, take a look at the ```ant``` build tasks used to automate package compile and build.
