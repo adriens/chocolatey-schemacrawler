@@ -13,7 +13,7 @@ Have [chocolatey](https://chocolatey.org/) [properly installed](https://chocolat
 To install schemacrawler, simply run, with ```Administrator``` privileges :
 
 ```
-choco install jdk8 graphviz.portable schemacrawler
+choco install schemacrawler
 ```
 
 Uninstall package :
