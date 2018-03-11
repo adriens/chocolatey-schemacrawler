@@ -13,7 +13,7 @@ Have [chocolatey](https://chocolatey.org/) [properly installed](https://chocolat
 To install schemacrawler, simply run, with ```Administrator``` privileges :
 
 ```
-choco install jdk8 graphviz.portable schemacrawler
+choco install schemacrawler
 ```
 
 Uninstall package :
@@ -41,11 +41,7 @@ Manually build and install the package from the source :
 choco install -fdv schemacrawler.nuspec
 ```
 
-Push the package to central [package repository](https://chocolatey.org/packages) :
-
-```
-choco push schemacrawler.14.20.01.nupkg -s https://chocolatey.org/ -apikey *****
-``` 
+Push the package to central [package repository](https://chocolatey.org/packages) : check prepared `ant` tasks.
 # For developers
 
 For developers, take a look at the ```ant``` build tasks used to automate package compile and build.
