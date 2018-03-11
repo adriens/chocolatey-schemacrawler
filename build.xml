@@ -61,7 +61,7 @@
     <target name="prepare"
             description="Prepare all the files required to run a &lt;choco install -fdv schemacrawler.nuspec&gt;"
             depends="clean,prepare.build.files">
-        <echo>ready to run choco build :</echo>
+        <echo>Ready to run choco build :</echo>
         <echo>choco install -fdv schemacrawler.nuspec</echo>
     </target>
     
