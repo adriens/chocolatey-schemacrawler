@@ -76,6 +76,15 @@
             <echo>Release command :</echo>
             <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey *******</echo>
     </target>
+	
+	<target name="get-release-command" 
+            depends="load.properties"
+            description="Just get the release command.">
+            <echo>Release command :</echo>
+            <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey *******</echo>
+    </target>
+	
+	
     
     <target name="choco-uninstall" 
             depends="clean"
