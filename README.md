@@ -1,5 +1,8 @@
+[![Chocolatey](https://img.shields.io/chocolatey/v/schemacrawler.svg)](https://chocolatey.org/packages/schemacrawler)
+[![Chocolatey](https://img.shields.io/chocolatey/dt/schemacrawler.svg)](https://chocolatey.org/packages/schemacrawler)
+
+
 # chocolatey-schemacrawler
-[![Chocolatey](https://img.shields.io/badge/chocolatey-download-blue.svg)](https://chocolatey.org/packages/schemacrawler)
 
 [Chocolatey](https://chocolatey.org)  package source to install [schemacrawler](http://www.schemacrawler.com/).
 
