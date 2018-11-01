@@ -1,2 +1,6 @@
 language: shell
 os: windows
+
+before_install:
+- ant prepare
+- choco -version
