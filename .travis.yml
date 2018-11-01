@@ -1,4 +1,4 @@
-language: shell
+language: generic
 os: windows
 
 before_install:
