@@ -1,6 +1,6 @@
 language: shell
 os: windows
 
-after_install:
-- ant prepare
+before_install:
+- ant -version
 - choco -version
