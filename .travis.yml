@@ -2,5 +2,5 @@ language: generic
 os: windows
 
 before_install:
-- ant -version
+- powershell -f prepare.ps1
 - choco -version
