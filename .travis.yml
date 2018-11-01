@@ -1,7 +1,6 @@
-language: shell
+language: generic
 os: windows
 
 before_install:
-- powershell "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
-- powershell -f prepare.ps1
+- powershell -executionpolicy bypass -f prepare.ps1
 - choco -version
