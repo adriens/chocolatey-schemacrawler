@@ -5,7 +5,7 @@ build_script:
   - ant info load.properties
   - ant make
 deploy_script:
-  - ps: . .\release.ps1
+  - ps: . .\release.ps1 %CHOCO_APIKEY%
 environment:
   CHOCO_APIKEY:
     secure: jRQ9WmVCdly4Z2gKEEq6ZIv+16er3lOM/JHejw+N4qzKkLZodGIXjchDfYLVQ1MK

@@ -1,1 +1,1 @@
-﻿choco push schemacrawler.@SCHEMACRAWLER_VERSION@.nupkg -s https://chocolatey.org/ -apikey %CHOCO_APIKEY%
+﻿choco push schemacrawler.@SCHEMACRAWLER_VERSION@.nupkg -s https://chocolatey.org/ -apikey $args[0]
