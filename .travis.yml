@@ -1,5 +1,6 @@
 language: generic
-os: windows
+os:
+- windows
 
 
 before_install:
