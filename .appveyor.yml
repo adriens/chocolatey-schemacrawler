@@ -1,4 +1,5 @@
 install:
   - ps: choco install ant
 build_script:
-  - ant -version 
+  - ant -version
+  - ant prepare
