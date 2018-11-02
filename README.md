@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/adriens/chocolatey-schemacrawler.svg?branch=master)](https://travis-ci.org/adriens/chocolatey-schemacrawler)
 [![Build status](https://ci.appveyor.com/api/projects/status/x7603wbn2yr32kib?svg=true)](https://ci.appveyor.com/project/adriens/chocolatey-schemacrawler)
 [![Chocolatey](https://img.shields.io/chocolatey/v/schemacrawler.svg)](https://chocolatey.org/packages/schemacrawler)
 [![Chocolatey](https://img.shields.io/chocolatey/dt/schemacrawler.svg)](https://chocolatey.org/packages/schemacrawler)
