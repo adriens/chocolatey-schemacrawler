@@ -3,7 +3,8 @@ install:
 build_script:
   - ant -version
   - ant prepare
-  - ps: ./release.ps1
+deploy_script:
+  - ps: . .\release.ps1
 environment:
   CHOCO_APIKEY:
     secure: jRQ9WmVCdly4Z2gKEEq6ZIv+16er3lOM/JHejw+N4qzKkLZodGIXjchDfYLVQ1MK
