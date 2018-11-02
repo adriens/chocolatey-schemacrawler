@@ -2,7 +2,8 @@ install:
   - ps: choco install ant
 build_script:
   - ant -version
-  - ant prepare
+  - ant info load.properties
+  - ant make
 deploy_script:
   - ps: . .\release.ps1
 environment:
