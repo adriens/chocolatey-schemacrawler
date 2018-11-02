@@ -1,0 +1,9 @@
+install:
+  - ps: choco install ant
+build_script:
+  - ant -version
+  - ant prepare
+  - choco push *.nupkg -s https://chocolatey.org/ -apikey %CHOCO_APIKEY%
+environment:
+  CHOCO_APIKEY:
+    secure: jRQ9WmVCdly4Z2gKEEq6ZIv+16er3lOM/JHejw+N4qzKkLZodGIXjchDfYLVQ1MK
