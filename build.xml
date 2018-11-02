@@ -56,6 +56,10 @@
         <replace file="tools/chocolateyUninstall.ps1" token="@SCHEMACRAWLER_VERSION@" value="${schemacrawler.version}"/>
         <echo>&lt;chocolateyUninstall.ps1&gt; file prepared.</echo>
         
+		<echo>Preparing &lt;release.ps1&gt; ...</echo>
+        <copy file="templates/release.ps1.TEMPLATE" tofile="release.ps1"/>
+        <replace file="release.ps1" token="@SCHEMACRAWLER_VERSION@" value="${schemacrawler.version}"/>
+        <echo>&lt;release.ps1&gt; file prepared.</echo>
     </target>
     
     <target name="prepare"
@@ -81,10 +85,15 @@
             depends="load.properties"
             description="Just get the release command.">
             <echo>Release command :</echo>
-            <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey *******</echo>
+            <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey %CHOCO_APIKEY%</echo>
     </target>
 	
-	
+	<target name="get-ps1-command" 
+            depends="load.properties"
+            description="Just get the release command.">
+            <echo>Release command :</echo>
+            <echo>choco push schemacrawler.${schemacrawler.version}.nupkg -s https://chocolatey.org/ -apikey %CHOCO_APIKEY%</echo>
+    </target>
     
     <target name="choco-uninstall" 
             depends="clean"
