@@ -4,5 +4,5 @@ os:
 
 
 before_install:
-- powershell -executionpolicy bypass -f prepare.ps1
+- powershell -executionpolicy bypass -File prepare.ps1
 - choco -version
