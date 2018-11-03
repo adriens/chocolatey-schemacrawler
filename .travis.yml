@@ -1,8 +1,0 @@
-language: generic
-os:
-- windows
-
-
-before_install:
-- powershell -executionpolicy bypass -File prepare.ps1
-- choco -version
