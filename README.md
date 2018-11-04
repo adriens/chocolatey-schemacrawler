@@ -5,7 +5,7 @@
 
 # chocolatey-schemacrawler
 
-[Chocolatey](https://chocolatey.org)  package source to install [schemacrawler](http://www.schemacrawler.com/).
+[Chocolatey](https://chocolatey.org)  package source to install [schemacrawler](http://www.schemacrawler.com/). More details about this project on this [linkedIn article](https://www.linkedin.com/pulse/continuous-delivery-windows-softwares-cloud-services-adrien-sales/).
 
 # Prerequisite
 
