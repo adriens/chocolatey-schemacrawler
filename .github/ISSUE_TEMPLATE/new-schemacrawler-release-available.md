@@ -10,5 +10,5 @@ Please release the choco package for latest schemacrawler `PUT_SCHEMACRAWLER_VER
 
 # Want to make release faster ?
 
-1 - Modify `schemacrawler.properties` with the target version
+1 - Modify [schemacrawler.properties](schemacrawler.properties) with the target version
 2 - Make a *PR*
