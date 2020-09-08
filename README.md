@@ -52,7 +52,9 @@ For developers, take a look at the ```ant``` build tasks used to automate packag
 
 Upgrade process:
 
-1 - Upgrade verion un properties file
-2 -  `ant make`
-3 - Install locally `choco install -fdv schemacrawler.nuspec`
-4 - Test command line `schemacrawler --version`
+1. Upgrade verion un properties file
+2. `ant make`
+3. Install locally `choco install -fdv schemacrawler.nuspec`
+4. Test command line `schemacrawler --version`
+
+
