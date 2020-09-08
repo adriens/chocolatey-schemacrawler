@@ -49,3 +49,10 @@ Push the package to central [package repository](https://chocolatey.org/packages
 # For developers
 
 For developers, take a look at the ```ant``` build tasks used to automate package compile and build.
+
+Upgrade process:
+
+1 - Upgrade verion un properties file
+2 -  `ant make`
+3 - Install locally `choco install -fdv schemacrawler.nuspec`
+4 - Test command line `schemacrawler --version`

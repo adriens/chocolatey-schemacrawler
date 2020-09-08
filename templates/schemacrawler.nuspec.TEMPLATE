@@ -30,7 +30,7 @@
     <projectSourceUrl>https://github.com/schemacrawler/SchemaCrawler</projectSourceUrl>
     <dependencies>
         <dependency id="jre8" version="[8.0,)" />
-        <dependency id="graphviz.portable" version="[2.38.20180209,)"/>
+        <dependency id="graphviz"/>
     </dependencies>
   </metadata>
   
