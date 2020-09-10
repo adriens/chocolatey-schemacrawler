@@ -29,7 +29,7 @@
     <packageSourceUrl>https://github.com/adriens/chocolatey-schemacrawler</packageSourceUrl>
     <projectSourceUrl>https://github.com/schemacrawler/SchemaCrawler</projectSourceUrl>
     <dependencies>
-        <dependency id="jre8" version="[8.0,)" />
+        <dependency id="javaruntime"/>
         <dependency id="graphviz"/>
     </dependencies>
   </metadata>
