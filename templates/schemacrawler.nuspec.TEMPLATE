@@ -21,7 +21,7 @@
     <tags>database-schemas jdbc metadata database-diagrams e-r-diagrams schema java</tags>
     <licenseUrl>http://www.schemacrawler.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.schemacrawler.com/images/schemacrawler_logo.svg</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/schemacrawler/SchemaCrawler/master/schemacrawler-website/src/site/resources/images/schemacrawler_logo.png</iconUrl>
     <releaseNotes>http://www.schemacrawler.com/changes-report.html</releaseNotes>
     <docsUrl>http://www.schemacrawler.com/how-to.html</docsUrl>
     <bugTrackerUrl>https://github.com/schemacrawler/SchemaCrawler/issues</bugTrackerUrl>
